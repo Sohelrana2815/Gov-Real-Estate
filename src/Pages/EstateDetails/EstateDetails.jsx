@@ -31,10 +31,9 @@ const EstateDetails = () => {
           <p>{estate.description}</p>
         </div>
         <div className="divider"></div>
-
-        <h4 className="text-xl font-medium">Overview</h4>
+        <h4 className="text-2xl font-medium">Overview</h4>
         {/* Main overview container */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 mt-6">
           {/* overview style 1*/}
           <div className="flex gap-x-5">
             <button className="btn btn-outline hover:bg-[#1563DF] hover:text-white">
@@ -71,10 +70,66 @@ const EstateDetails = () => {
               <BiArea className="text-xl" />
             </button>
             <div>
-              <p className="text-base">Location</p>
+              <p className="text-base">Area</p>
               <p className="text-base">{estate.area}</p>
             </div>
           </div>
+        </div>
+        <div className="divider"></div>
+        {/* Facilities */}
+        <div className="mt-6">
+          <p className="md:text-2xl font-medium py-3">Facilities</p>
+          <ul className="list-disc ml-4">
+            {estate.facilities.map((facility, index) => (
+              <li key={index}>{facility}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Leave a comment */}
+
+        <div>
+          <div className="divider"></div>
+          <p className="md:text-2xl font-medium">Leave A comment</p>
+          <p>
+            Your email address will not be published. Required fields are marked
+            *
+          </p>
+          <form className="space-y-6 py-10">
+            {/* Input field */}
+            <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <input
+                  type="text"
+                  className="input input-bordered rounded-full w-full"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  className="input input-bordered rounded-full w-full"
+                  placeholder="Your Email"
+                />
+              </div>
+            </div>
+            {/* text area */}
+            <div>
+              <textarea
+                className="textarea textarea-bordered md:w-3/4"
+                placeholder="Write comment"
+              ></textarea>
+            </div>
+            {/* Button */}
+            <div>
+              <button
+                type="submit"
+                className="btn bg-[#1563DF] text-white text-base rounded-full md:w-3/4"
+              >
+                Post Comment
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </>

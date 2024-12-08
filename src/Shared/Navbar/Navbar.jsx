@@ -1,6 +1,21 @@
 import { BiMenu } from "react-icons/bi";
 import logo from "../../assets/logo/logo.png";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
+  const navLinks = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="contact">Contact</NavLink>
+      </li>
+      <li>
+        <NavLink to="contact">404 Page</NavLink>
+      </li>
+    </>
+  );
+
   return (
     <>
       <div className=" shadow-md bg-base-100">
@@ -14,57 +29,25 @@ const Navbar = () => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
-                <li>
-                  <a>Item 1</a>
-                </li>
-                <li>
-                  <a>Parent</a>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a>Item 3</a>
-                </li>
+                {navLinks}
               </ul>
             </div>
-            <div className="flex items-center">
-              <img src={logo} alt="" className="w-10 md:w-24" />
-              <p className="md:text-xl font-bold text-sm">Gov Real Estate</p>
-            </div>
+            <Link to="/">
+              <div className="flex items-center">
+                <img src={logo} alt="" className="w-10 md:w-24" />
+                <p className="md:text-xl font-bold text-sm">Gov Real Estate</p>
+              </div>
+            </Link>
           </div>
           <div className="navbar-start hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <details>
-                  <summary>Parent</summary>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
-            </ul>
+            <ul className="menu menu-horizontal px-1">{navLinks}</ul>
           </div>
           <div className="navbar-end gap-2">
-            <a className="btn rounded-full  text-lg  btn-outline px-10 hover:bg-[#1563DF] hover:text-white border-[#1563DF] hover:border-none">
-              Sign in
-            </a>
+            <Link to="/login">
+              <a className="btn rounded-full  text-lg  btn-outline px-10 hover:bg-[#1563DF] hover:text-white border-[#1563DF] hover:border-none">
+                Sign in
+              </a>
+            </Link>
             <a className="btn bg-[#1563DF] text-white px-10 rounded-full text-lg">
               Sign up
             </a>
