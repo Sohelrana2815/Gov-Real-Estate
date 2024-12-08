@@ -4,12 +4,13 @@ import banner from "../../../assets/Banner/banner.jpg";
 import banner1 from "../../../assets/Banner/banner1.jpg";
 import banner2 from "../../../assets/Banner/banner2.jpg";
 import { BiSearch } from "react-icons/bi";
+import "./Banner.css";
 const Banner = () => {
   return (
     <Carousel>
       <div className="relative">
         <img src={banner} alt="estate" className="w-full h-auto" />
-        <div className="absolute inset-0 flex  flex-col  items-center md:pt-56 pt-10 bg-[#161E2D] bg-opacity-30 md:space-y-8">
+        <div className="banner-style">
           <h2 className="text-white text-2xl md:text-7xl font-bold">
             Find Your (Dynamic Text)
           </h2>
@@ -17,11 +18,11 @@ const Banner = () => {
             We are a real estate agency that will help you find the best
             residence you dream of, let’s discuss for your dream house?
           </p>
-          <div className="flex gap-4">
-            <button className="btn bg-blue-600 text-white md:text-lg rounded-full md:px-12 border-none">
+          <div className="flex gap-4 mt-4 md:mt-0">
+            <button className="btn btn-sm md:btn-md bg-blue-600 text-white md:text-lg rounded-full md:px-12 border-none">
               For Rent
             </button>
-            <button className="btn btn-outline text-white md:text-lg rounded-full md:px-12">
+            <button className="btn btn-sm md:btn-md btn-outline text-white md:text-lg rounded-full md:px-12">
               For Sale
             </button>
           </div>
