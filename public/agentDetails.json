@@ -1,0 +1,22 @@
+[
+  {
+    "name": "John Doe",
+    "role": "Sales Manager",
+    "photo": "https://i.ibb.co.com/k9KV90d/agent-1.jpg"
+  },
+  {
+    "name": "Mike Johnson",
+    "role": "Rental Consultant",
+    "photo": "https://i.ibb.co.com/mhFKCXq/agent-2.jpg"
+  },
+  {
+    "name": "Alice Brown",
+    "role": "Senior Broker",
+    "photo": "https://i.ibb.co.com/4VfNPRL/agent-3.jpg"
+  },
+  {
+    "name": "David Lee",
+    "role": "Property Consultant",
+    "photo": "https://i.ibb.co.com/mzHm1wC/agent-4.jpg"
+  }
+]

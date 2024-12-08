@@ -15,7 +15,11 @@
       "Cafeteria"
     ],
     "image": "https://i.ibb.co.com/m4Kx3D0/img1.jpg",
-    "agent": "John Doe - 555-1234"
+    "customer_profile": {
+      "name": "Alex Carter",
+      "photo": "https://i.ibb.co.com/1rsNhzz/customer1.jpg",
+      "contact": "alex.carter@example.com"
+    }
   },
   {
     "id": 2,
@@ -28,7 +32,12 @@
     "location": "Riverside Boulevard",
     "facilities": ["Walking trails", "Playgrounds", "Picnic areas"],
     "image": "https://i.ibb.co.com/92LTyZR/img2.jpg",
-    "agent": "Mike Johnson - 555-5678"
+
+    "customer_profile": {
+      "name": "Sophia Brown",
+      "photo": "https://i.ibb.co.com/0cmxRpg/customer2.jpg",
+      "contact": "sophia.brown@example.com"
+    }
   },
   {
     "id": 3,
@@ -41,7 +50,12 @@
     "location": "Central Avenue",
     "facilities": ["Courtrooms", "Offices", "Parking lot", "Conference rooms"],
     "image": "https://i.ibb.co.com/QXV06MQ/img6.webp",
-    "agent": "Alice Brown - 555-7890"
+
+    "customer_profile": {
+      "name": "James Wilson",
+      "photo": "https://i.ibb.co.com/m6nJB84/customer3.jpg",
+      "contact": "james.wilson@example.com"
+    }
   },
   {
     "id": 4,
@@ -59,7 +73,12 @@
       "Command center"
     ],
     "image": "https://i.ibb.co.com/SrwGX3C/img4.webp",
-    "agent": "David Lee - 555-2468"
+
+    "customer_profile": {
+      "name": "Laura Davis",
+      "photo": "https://i.ibb.co.com/hy8hTCj/customer4.webp",
+      "contact": "laura.davis@example.com"
+    }
   },
   {
     "id": 5,
@@ -72,7 +91,12 @@
     "location": "Maple Street",
     "facilities": ["Event spaces", "Fitness rooms", "Recreation rooms"],
     "image": "https://i.ibb.co.com/fk63Hkg/image5.jpg",
-    "agent": "Sarah Johnson - 555-1357"
+
+    "customer_profile": {
+      "name": "Henry White",
+      "photo": "https://i.ibb.co.com/s3fNBN9/customer5.jpg",
+      "contact": "henry.white@example.com"
+    }
   },
   {
     "id": 6,
@@ -85,7 +109,11 @@
     "location": "Suburban Area",
     "facilities": ["Garage", "Training rooms", "Living quarters"],
     "image": "https://i.ibb.co.com/JqpFWMw/img6.jpg",
-    "agent": "Paul Walker - 555-9753"
+    "customer_profile": {
+      "name": "Maria Lopez",
+      "photo": "https://i.ibb.co.com/Z2cM1RL/img6.jpg",
+      "contact": "maria.lopez@example.com"
+    }
   },
   {
     "id": 7,
@@ -98,7 +126,11 @@
     "location": "Government District",
     "facilities": ["Meeting rooms", "Offices", "Parking lot"],
     "image": "https://i.ibb.co.com/0cLwySB/img7.jpg",
-    "agent": "Emily Green - 555-8642"
+    "customer_profile": {
+      "name": "David Clark",
+      "photo": "https://i.ibb.co.com/jyb0XCr/img7.webp",
+      "contact": "david.clark@example.com"
+    }
   },
   {
     "id": 8,
@@ -111,7 +143,11 @@
     "location": "High Street",
     "facilities": ["Co-working space", "Digital library", "Conference rooms"],
     "image": "https://i.ibb.co.com/wJPGh6X/img8.jpg",
-    "agent": "Tom Miller - 555-4310"
+    "customer_profile": {
+      "name": "Rachel Parker",
+      "photo": "https://i.ibb.co.com/t3c630N/img8.jpg",
+      "contact": "rachel.parker@example.com"
+    }
   },
   {
     "id": 9,
@@ -124,6 +160,10 @@
     "location": "Parkside Lane",
     "facilities": ["Event pavilion", "Seating area", "Open green spaces"],
     "image": "https://i.ibb.co.com/0tKwnMQ/img9.jpg",
-    "agent": "Jessica Taylor - 555-6814"
+    "customer_profile": {
+      "name": "Oliver Brown",
+      "photo": "https://i.ibb.co.com/X3rNv1n/img9.jpg",
+      "contact": "oliver.brown@example.com"
+    }
   }
 ]

@@ -14,15 +14,19 @@ const EstateCard = ({ estate }) => {
     facilities,
     image,
     agent,
+    customer_profile,
   } = estate;
   return (
     <>
       <div>
-        <div className="card card-compact bg-base-100 shadow-lg">
-          <figure className="md:h-72">
+        <div className="card card-compact bg-base-100 py-2 shadow-md">
+          <figure className="md:h-72 relative border border-blue-500">
+            <p className="absolute text-white rounded-full top-0 left-0 mt-4 ml-2 bg-black bg-opacity-50 px-3 py-1">
+              {segment_name}
+            </p>
             <img src={image} alt="Shoes" />
           </figure>
-          <div className="card-body">
+          <div className="card-body space-y-2">
             <h2 className="card-title">{estate_title}</h2>
             <div className="flex items-center">
               <p className="flex items-center gap-2 text-base">
@@ -38,14 +42,33 @@ const EstateCard = ({ estate }) => {
                 {area}
               </p>
             </div>
-
-            <div className="divider"></div>
-            <div>
-              <img src={agent} alt="" />
+            <hr />
+            {/* Mani container */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                {/* Customer avatar */}
+                <div className="avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={customer_profile.photo} alt="" />
+                  </div>
+                </div>
+                {/* Customer name */}
+                <div>
+                  <div>
+                    <p className="text-base">{customer_profile.name}</p>
+                  </div>
+                </div>
+              </div>
+              {/* price */}
+              <div>
+                <p className="text-base font-medium">${price}</p>
+              </div>
             </div>
-            <p>{price}</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+            {/* Button */}
+            <div>
+              <button className="btn rounded-full px-8 text-white bg-[#1563DF]">
+                View Property
+              </button>
             </div>
           </div>
         </div>
