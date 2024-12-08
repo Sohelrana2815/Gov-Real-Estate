@@ -14,7 +14,7 @@
       "Meeting halls",
       "Cafeteria"
     ],
-    "image": "https://example.com/images/library.jpg",
+    "image": "https://i.ibb.co.com/m4Kx3D0/img1.jpg",
     "agent": "John Doe - 555-1234"
   },
   {
@@ -27,7 +27,7 @@
     "area": "50,000 sq ft",
     "location": "Riverside Boulevard",
     "facilities": ["Walking trails", "Playgrounds", "Picnic areas"],
-    "image": "https://example.com/images/park.jpg",
+    "image": "https://i.ibb.co.com/92LTyZR/img2.jpg",
     "agent": "Mike Johnson - 555-5678"
   },
   {
@@ -40,7 +40,7 @@
     "area": "30,000 sq ft",
     "location": "Central Avenue",
     "facilities": ["Courtrooms", "Offices", "Parking lot", "Conference rooms"],
-    "image": "https://example.com/images/courthouse.jpg",
+    "image": "https://i.ibb.co.com/QXV06MQ/img6.webp",
     "agent": "Alice Brown - 555-7890"
   },
   {
@@ -58,7 +58,7 @@
       "Storage units",
       "Command center"
     ],
-    "image": "https://example.com/images/military_base.jpg",
+    "image": "https://i.ibb.co.com/SrwGX3C/img4.webp",
     "agent": "David Lee - 555-2468"
   },
   {
@@ -71,7 +71,7 @@
     "area": "20,000 sq ft",
     "location": "Maple Street",
     "facilities": ["Event spaces", "Fitness rooms", "Recreation rooms"],
-    "image": "https://example.com/images/community_center.jpg",
+    "image": "https://i.ibb.co.com/fk63Hkg/image5.jpg",
     "agent": "Sarah Johnson - 555-1357"
   },
   {
@@ -84,7 +84,7 @@
     "area": "10,000 sq ft",
     "location": "Suburban Area",
     "facilities": ["Garage", "Training rooms", "Living quarters"],
-    "image": "https://example.com/images/fire_station.jpg",
+    "image": "https://i.ibb.co.com/JqpFWMw/img6.jpg",
     "agent": "Paul Walker - 555-9753"
   },
   {
@@ -97,7 +97,7 @@
     "area": "25,000 sq ft",
     "location": "Government District",
     "facilities": ["Meeting rooms", "Offices", "Parking lot"],
-    "image": "https://example.com/images/city_hall.jpg",
+    "image": "https://i.ibb.co.com/0cLwySB/img7.jpg",
     "agent": "Emily Green - 555-8642"
   },
   {
@@ -110,7 +110,7 @@
     "area": "10,000 sq ft",
     "location": "High Street",
     "facilities": ["Co-working space", "Digital library", "Conference rooms"],
-    "image": "https://example.com/images/urban_library.jpg",
+    "image": "https://i.ibb.co.com/wJPGh6X/img8.jpg",
     "agent": "Tom Miller - 555-4310"
   },
   {
@@ -123,7 +123,7 @@
     "area": "5,000 sq ft",
     "location": "Parkside Lane",
     "facilities": ["Event pavilion", "Seating area", "Open green spaces"],
-    "image": "https://example.com/images/park_pavilion.jpg",
+    "image": "https://i.ibb.co.com/0tKwnMQ/img9.jpg",
     "agent": "Jessica Taylor - 555-6814"
   }
 ]
