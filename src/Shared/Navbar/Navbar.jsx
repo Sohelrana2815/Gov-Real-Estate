@@ -3,7 +3,7 @@ import logo from "../../assets/logo/logo.png";
 const Navbar = () => {
   return (
     <>
-      <div className="border bg-base-100">
+      <div className=" shadow-md bg-base-100">
         <div className="navbar max-w-screen-2xl mx-auto ">
           <div className="navbar-start">
             <div className="dropdown">
