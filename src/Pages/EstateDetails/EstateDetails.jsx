@@ -1,10 +1,12 @@
+import { useParams } from "react-router-dom";
 
 const EstateDetails = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  const { id } = useParams();
+  return (
+    <>
+      <div>Details: {id}</div>
+    </>
+  );
 };
 
 export default EstateDetails;

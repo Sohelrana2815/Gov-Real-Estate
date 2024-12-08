@@ -1,5 +1,6 @@
 import { BiArea, BiLocationPlus } from "react-icons/bi";
 import { GrStatusInfo } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const EstateCard = ({ estate }) => {
   const {
@@ -66,9 +67,11 @@ const EstateCard = ({ estate }) => {
             </div>
             {/* Button */}
             <div>
-              <button className="btn rounded-full px-8 text-white bg-[#1563DF]">
-                View Property
-              </button>
+              <Link to={`/estateDetails/${id}`}>
+                <button className="btn rounded-full px-8 text-white bg-[#1563DF]">
+                  View Property
+                </button>
+              </Link>
             </div>
           </div>
         </div>
