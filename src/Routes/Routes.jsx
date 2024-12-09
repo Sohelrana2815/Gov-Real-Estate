@@ -5,6 +5,7 @@ import EstateDetails from "../Pages/EstateDetails/EstateDetails";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
+import ContactUs from "../Pages/ContactUs/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "signUp",
         element: <SignUp />,
+      },
+      {
+        path: "contactUs",
+        element: <ContactUs />,
       },
     ],
   },
