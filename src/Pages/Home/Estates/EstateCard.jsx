@@ -19,7 +19,7 @@ const EstateCard = ({ estate }) => {
   return (
     <>
       <AnimatedComponent animation="fade-in">
-        <div>
+        <div className="font-Manrope">
           <div className="card card-compact bg-base-100 py-2 shadow-md">
             <figure className="md:h-72 relative xl:border xl:border-blue-500">
               <p className="absolute text-white rounded-full top-0 left-0 mt-4 ml-2 bg-black bg-opacity-50 px-3 py-1">

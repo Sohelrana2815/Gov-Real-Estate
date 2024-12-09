@@ -21,8 +21,7 @@ const Estates = () => {
         subHeading="Recommended For You"
       />
 
-      <div className="max-w-screen-2xl mx-auto">
-        <h2 className="text-center">Estates Data: {estates.length}</h2>
+      <div className="max-w-screen-2xl mx-auto font-Manrope">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 p-4">
           {estates.slice(0, visibleEstates).map((estate) => (
             <EstateCard key={estate.id} estate={estate} />

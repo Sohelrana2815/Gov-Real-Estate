@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import GitHubLogin from "../../Components/SocialLogin/GitHubLogin";
 import AnimatedComponent from "../../Components/AnimatedComponent/AnimatedComponent";
+import Swal from "sweetalert2";
 const Login = () => {
   const [err, setErr] = useState("");
   const { loginUser, updateUserProfile } = useAuth();
@@ -13,11 +14,7 @@ const Login = () => {
   const navigate = useNavigate();
   console.log("location in the login page", location);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
     const { email, password } = data;
@@ -26,8 +23,16 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         updateUserProfile();
+        reset();
         // Navigate after login
         navigate(location?.state ? location.state : "/");
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Welcome Back!",
+          showConfirmButton: false,
+          timer: 2000,
+        });
       })
       .catch((error) => {
         setErr("Email or Password invalid please try again");

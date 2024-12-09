@@ -10,7 +10,7 @@ const Banner = () => {
   return (
     <AnimatedComponent animation="fade">
       <Carousel>
-        <div className="relative">
+        <div className="relative font-Manrope">
           <img src={banner} alt="estate" className="w-full h-auto" />
           <div className="banner-style">
             <h2 className="text-white text-2xl md:text-7xl font-bold">
