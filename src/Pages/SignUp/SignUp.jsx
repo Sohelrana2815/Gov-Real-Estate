@@ -101,10 +101,19 @@ const SignUp = () => {
                     type="password"
                     placeholder="Password"
                     name="password"
-                    {...register("password")}
+                    {...register("password", {
+                      required: "Password is required",
+                      pattern: {
+                        value: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/,
+                        message:
+                          "Password must have an uppercase letter, a lowercase letter, and be at least 6 characters long",
+                      },
+                    })}
                     className="input input-bordered rounded-full"
-                    required
                   />
+                  {errors.password && (
+                    <p className="text-red-500">{errors.password.message}</p>
+                  )}
                 </div>
                 <div className="form-control mt-6">
                   <button
