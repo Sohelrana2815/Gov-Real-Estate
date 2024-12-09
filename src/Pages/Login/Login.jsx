@@ -4,6 +4,7 @@ import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
+import GitHubLogin from "../../Components/SocialLogin/GitHubLogin";
 const Login = () => {
   const [err, setErr] = useState("");
   const { loginUser, updateUserProfile } = useAuth();
@@ -86,6 +87,7 @@ const Login = () => {
                   Sign in
                 </button>
                 <SocialLogin />
+                <GitHubLogin />
                 {err && <p className="text-red-500">{err}</p>}
                 <p className="text-center mt-3">
                   Do not have have an account?{" "}
