@@ -1,7 +1,9 @@
 import { BiMenu } from "react-icons/bi";
 import logo from "../../assets/logo/logo.png";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 const Navbar = () => {
+  const { user } = useAuth();
   const navLinks = (
     <>
       <li>
@@ -43,16 +45,22 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1">{navLinks}</ul>
           </div>
           <div className="navbar-end gap-2">
-            <Link to="/login">
-              <button className="btn rounded-full  text-lg  btn-outline px-10 hover:bg-[#1563DF] hover:text-white border-[#1563DF] hover:border-none">
-                Sign in
-              </button>
-            </Link>
-            <Link to="/signUp">
-              <button className="btn bg-[#1563DF] text-white px-10 rounded-full text-lg">
-                Sign up
-              </button>
-            </Link>
+            {user ? (
+              <button className="btn bg-[#1563DF] text-white">Logout</button>
+            ) : (
+              <>
+                <Link to="/login">
+                  <button className="btn rounded-full  text-lg  btn-outline px-10 hover:bg-[#1563DF] hover:text-white border-[#1563DF] hover:border-none">
+                    Sign in
+                  </button>
+                </Link>
+                <Link to="/signUp">
+                  <button className="btn bg-[#1563DF] text-white px-10 rounded-full text-lg">
+                    Sign up
+                  </button>
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

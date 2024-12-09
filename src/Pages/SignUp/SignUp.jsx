@@ -1,13 +1,26 @@
 import { useForm } from "react-hook-form";
 import signUpBackgroundImg from "../../assets/Banner/banner1.jpg";
+import useAuth from "../../Hooks/useAuth";
 const SignUp = () => {
+  const { createNewUser, updateUserProfile } = useAuth();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const { name, photoURL, email, password } = data;
+    createNewUser(email, password).then((result) => {
+      console.log(result.user);
+
+      updateUserProfile(name, photoURL).then(() => {
+        console.log("UpdateProfile successfully");
+        alert("UpdateProfile successfully");
+      });
+    });
+  };
 
   return (
     <>
