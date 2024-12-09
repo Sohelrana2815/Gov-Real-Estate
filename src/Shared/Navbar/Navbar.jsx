@@ -2,11 +2,27 @@ import { BiMenu } from "react-icons/bi";
 import logo from "../../assets/logo/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 const Navbar = () => {
   const { user, logout, loading } = useAuth();
 
   const handleLogout = () => {
-    logout();
+    Swal.fire({
+      title: "Are you sure?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Logout!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        logout();
+        Swal.fire({
+          title: "Logout successfully!",
+          icon: "success",
+        });
+      }
+    });
   };
 
   if (loading) {

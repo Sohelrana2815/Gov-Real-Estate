@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import GitHubLogin from "../../Components/SocialLogin/GitHubLogin";
 import AnimatedComponent from "../../Components/AnimatedComponent/AnimatedComponent";
+import Swal from "sweetalert2";
 const SignUp = () => {
   const { createNewUser, updateUserProfile } = useAuth();
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -20,8 +22,17 @@ const SignUp = () => {
       console.log(result.user);
 
       updateUserProfile(name, photoURL).then(() => {
-        console.log("UpdateProfile successfully");
-        alert("UpdateProfile successfully");
+        console.log("Update successfully");
+        if ((name, photoURL)) {
+          reset();
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Sign up successfully",
+            showConfirmButton: false,
+            timer: 2000,
+          });
+        }
       });
     });
   };
