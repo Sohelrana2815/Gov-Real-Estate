@@ -11,7 +11,9 @@ const Navbar = () => {
 
   if (loading) {
     return (
-      <span className="loading loading-dots loading-lg text-[#1563DF]"></span>
+      <div className="flex justify-center">
+        <span className="loading loading-dots loading-lg text-[#1563DF]"></span>
+      </div>
     );
   }
 
@@ -21,7 +23,7 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="contact">Contact</NavLink>
+        <NavLink to="contact">Contact Us</NavLink>
       </li>
       <li>
         <NavLink to="contact">404 Page</NavLink>

@@ -12,16 +12,14 @@ const EstateCard = ({ estate }) => {
     status,
     area,
     location,
-    facilities,
     image,
-    agent,
     customer_profile,
   } = estate;
   return (
     <>
       <div>
         <div className="card card-compact bg-base-100 py-2 shadow-md">
-          <figure className="md:h-72 relative border border-blue-500">
+          <figure className="md:h-72 relative xl:border xl:border-blue-500">
             <p className="absolute text-white rounded-full top-0 left-0 mt-4 ml-2 bg-black bg-opacity-50 px-3 py-1">
               {segment_name}
             </p>
