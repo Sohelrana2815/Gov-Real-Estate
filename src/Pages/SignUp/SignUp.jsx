@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import signUpBackgroundImg from "../../assets/Banner/banner1.jpg";
 import useAuth from "../../Hooks/useAuth";
+import { Link } from "react-router-dom";
 const SignUp = () => {
   const { createNewUser, updateUserProfile } = useAuth();
 
@@ -100,12 +101,6 @@ const SignUp = () => {
                   className="input input-bordered rounded-full"
                   required
                 />
-
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="form-control mt-6">
                 <button
@@ -115,6 +110,12 @@ const SignUp = () => {
                   Sign up
                 </button>
               </div>
+              <p className="text-center mt-3">
+                Do not have have an account?{" "}
+                <Link to="/login" className="underline text-[#1563DF] ">
+                  Sign in
+                </Link>
+              </p>
             </form>
           </div>
         </div>

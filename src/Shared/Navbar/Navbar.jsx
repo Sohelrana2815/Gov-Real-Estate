@@ -3,7 +3,12 @@ import logo from "../../assets/logo/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 const Navbar = () => {
-  const { user } = useAuth();
+  const { user, logout, loading } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+  };
+
   const navLinks = (
     <>
       <li>
@@ -46,7 +51,12 @@ const Navbar = () => {
           </div>
           <div className="navbar-end gap-2">
             {user ? (
-              <button className="btn bg-[#1563DF] text-white">Logout</button>
+              <button
+                onClick={handleLogout}
+                className="btn bg-[#1563DF] text-white"
+              >
+                Logout
+              </button>
             ) : (
               <>
                 <Link to="/login">

@@ -1,5 +1,37 @@
+import { useForm } from "react-hook-form";
 import estateImg from "../../assets/Banner/banner2.jpg";
+import useAuth from "../../Hooks/useAuth";
+import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
+  const [err, setErr] = useState("");
+  const { loginUser, updateUserProfile } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log("location in the login page", location);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    const { email, password } = data;
+
+    loginUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        updateUserProfile();
+        // Navigate after login
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        setErr("Email or Password invalid please try again");
+        console.error(error);
+      });
+  };
+
   return (
     <>
       <div
@@ -15,7 +47,7 @@ const Login = () => {
         {/* Optional overlay for better contrast */}
         <div className="hero-content flex-col w-full justify-center items-center">
           <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
-            <form className="card-body">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-2xl font-medium">Login</span>
@@ -26,6 +58,8 @@ const Login = () => {
                 <input
                   type="email"
                   placeholder="Email"
+                  name="email"
+                  {...register("email")}
                   className="input input-bordered rounded-full"
                   required
                 />
@@ -37,19 +71,26 @@ const Login = () => {
                 <input
                   type="password"
                   placeholder="Password"
+                  name="password"
+                  {...register("password")}
                   className="input input-bordered rounded-full"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-[#1563DF] text-white text-base rounded-full">
+                <button
+                  type="submit"
+                  className="btn bg-[#1563DF] text-white text-base rounded-full"
+                >
                   Sign in
                 </button>
+                {err && <p className="text-red-500">{err}</p>}
+                <p className="text-center mt-3">
+                  Do not have have an account?{" "}
+                  <Link to="/signUp" className="underline text-[#1563DF] ">
+                    Sign up
+                  </Link>
+                </p>
               </div>
             </form>
           </div>
