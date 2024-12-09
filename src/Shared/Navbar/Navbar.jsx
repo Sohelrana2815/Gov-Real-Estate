@@ -57,12 +57,19 @@ const Navbar = () => {
           </div>
           <div className="navbar-end gap-2">
             {user ? (
-              <button
-                onClick={handleLogout}
-                className="btn bg-[#1563DF] text-white"
-              >
-                Logout
-              </button>
+              <>
+                <div className="avatar cursor-pointer" title={user.displayName}>
+                  <div className="w-10 rounded-full">
+                    <img src={user.photoURL} alt={user.displayName} />
+                  </div>
+                </div>
+                <button
+                  onClick={handleLogout}
+                  className="btn bg-[#1563DF] text-white"
+                >
+                  Logout
+                </button>
+              </>
             ) : (
               <>
                 <Link to="/login">

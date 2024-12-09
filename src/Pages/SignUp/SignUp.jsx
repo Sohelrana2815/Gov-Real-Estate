@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import signUpBackgroundImg from "../../assets/Banner/banner1.jpg";
 import useAuth from "../../Hooks/useAuth";
 import { Link } from "react-router-dom";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 const SignUp = () => {
   const { createNewUser, updateUserProfile } = useAuth();
 
@@ -110,6 +111,7 @@ const SignUp = () => {
                   Sign up
                 </button>
               </div>
+              <SocialLogin />
               <p className="text-center mt-3">
                 Do not have have an account?{" "}
                 <Link to="/login" className="underline text-[#1563DF] ">
