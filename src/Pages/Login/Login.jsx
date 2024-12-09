@@ -1,9 +1,20 @@
+import estateImg from "../../assets/Banner/banner2.jpg";
 const Login = () => {
   return (
     <>
-      <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col w-full">
-          <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div
+        className="hero min-h-screen"
+        style={{
+          backgroundImage: `url(${estateImg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60 bg-black"></div>{" "}
+        {/* Optional overlay for better contrast */}
+        <div className="hero-content flex-col w-full justify-center items-center">
+          <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
             <form className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -15,7 +26,7 @@ const Login = () => {
                 <input
                   type="email"
                   placeholder="Email"
-                  className="input input-bordered"
+                  className="input input-bordered rounded-full"
                   required
                 />
               </div>
@@ -26,7 +37,7 @@ const Login = () => {
                 <input
                   type="password"
                   placeholder="Password"
-                  className="input input-bordered"
+                  className="input input-bordered rounded-full"
                   required
                 />
                 <label className="label">
@@ -36,7 +47,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-[#1563DF] text-white text-base">
+                <button className="btn bg-[#1563DF] text-white text-base rounded-full">
                   Sign in
                 </button>
               </div>

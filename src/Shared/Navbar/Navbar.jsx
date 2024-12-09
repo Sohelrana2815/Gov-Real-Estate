@@ -44,13 +44,15 @@ const Navbar = () => {
           </div>
           <div className="navbar-end gap-2">
             <Link to="/login">
-              <a className="btn rounded-full  text-lg  btn-outline px-10 hover:bg-[#1563DF] hover:text-white border-[#1563DF] hover:border-none">
+              <button className="btn rounded-full  text-lg  btn-outline px-10 hover:bg-[#1563DF] hover:text-white border-[#1563DF] hover:border-none">
                 Sign in
-              </a>
+              </button>
             </Link>
-            <a className="btn bg-[#1563DF] text-white px-10 rounded-full text-lg">
-              Sign up
-            </a>
+            <Link to="/signUp">
+              <button className="btn bg-[#1563DF] text-white px-10 rounded-full text-lg">
+                Sign up
+              </button>
+            </Link>
           </div>
         </div>
       </div>
