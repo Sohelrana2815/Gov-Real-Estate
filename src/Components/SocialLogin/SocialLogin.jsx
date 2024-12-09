@@ -24,7 +24,7 @@ const SocialLogin = () => {
       className="btn btn-outline rounded-full"
       onClick={handleGoogleLogin}
     >
-      <FcGoogle className="text-lg " />
+      <FcGoogle className="text-lg" />
       Continue With Google
     </button>
   );

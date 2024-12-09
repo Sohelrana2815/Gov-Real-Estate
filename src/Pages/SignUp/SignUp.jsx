@@ -111,6 +111,7 @@ const SignUp = () => {
                   Sign up
                 </button>
               </div>
+
               <SocialLogin />
               <p className="text-center mt-3">
                 Do not have have an account?{" "}

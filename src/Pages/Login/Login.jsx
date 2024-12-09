@@ -3,6 +3,7 @@ import estateImg from "../../assets/Banner/banner2.jpg";
 import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 const Login = () => {
   const [err, setErr] = useState("");
   const { loginUser, updateUserProfile } = useAuth();
@@ -77,13 +78,14 @@ const Login = () => {
                   required
                 />
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control">
                 <button
                   type="submit"
-                  className="btn bg-[#1563DF] text-white text-base rounded-full"
+                  className="btn bg-[#1563DF] text-white text-base rounded-full my-4"
                 >
                   Sign in
                 </button>
+                <SocialLogin />
                 {err && <p className="text-red-500">{err}</p>}
                 <p className="text-center mt-3">
                   Do not have have an account?{" "}
