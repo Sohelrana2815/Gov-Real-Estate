@@ -9,6 +9,12 @@ const Navbar = () => {
     logout();
   };
 
+  if (loading) {
+    return (
+      <span className="loading loading-dots loading-lg text-[#1563DF]"></span>
+    );
+  }
+
   const navLinks = (
     <>
       <li>
