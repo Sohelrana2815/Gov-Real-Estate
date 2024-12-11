@@ -8,7 +8,6 @@ const EstateCard = ({ estate }) => {
     id,
     estate_title,
     segment_name,
-    description,
     price,
     status,
     area,

@@ -77,13 +77,13 @@ const Navbar = () => {
             {user ? (
               <>
                 <div className="avatar cursor-pointer" title={user.displayName}>
-                  <div className="w-10 rounded-full">
+                  <div className="w-8 md:w-10 rounded-full">
                     <img src={user.photoURL} alt={user.displayName} />
                   </div>
                 </div>
                 <button
                   onClick={handleLogout}
-                  className="btn bg-[#1563DF] text-white"
+                  className="btn bg-[#1563DF] btn-sm md:btn-md text-white"
                 >
                   Logout
                 </button>

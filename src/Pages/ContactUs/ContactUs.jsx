@@ -22,7 +22,7 @@ const ContactUs = () => {
                 {/* contact us text */}
                 <div>
                   <p className="md:text-xl font-medium">Drop Us A Line</p>
-                  <p className="text-lg">
+                  <p className="md:text-lg">
                     Feel free to connect with us through our online channels for
                     updates, news, and more.
                   </p>
