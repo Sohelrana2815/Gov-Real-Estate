@@ -1,8 +1,8 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import banner from "../../../assets/Banner/banner.jpg";
-import banner1 from "../../../assets/Banner/banner1.jpg";
-import banner2 from "../../../assets/Banner/banner2.jpg";
+import banner from "../../../assets/Banner/banner.webp";
+import banner1 from "../../../assets/Banner/banner1.webp";
+import banner2 from "../../../assets/Banner/banner2.webp";
 import { BiSearch } from "react-icons/bi";
 import "./Banner.css";
 import AnimatedComponent from "../../../Components/AnimatedComponent/AnimatedComponent";

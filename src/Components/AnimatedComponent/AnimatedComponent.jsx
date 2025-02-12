@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 const AnimatedComponent = ({
   animation,
-  duration = 2500,
+  duration = 1000,
   delay = 0,
   offset = 100,
   children,

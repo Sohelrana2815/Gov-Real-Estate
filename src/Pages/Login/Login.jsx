@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import estateImg from "../../assets/Banner/banner2.jpg";
+import estateImg from "../../assets/Banner/banner2.webp";
 import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";

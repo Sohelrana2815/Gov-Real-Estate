@@ -1,4 +1,4 @@
-import contactImg from "../../assets/contactUs/contact.avif";
+import contactImg from "../../assets/contactUs/contact.webp";
 import AnimatedComponent from "../../Components/AnimatedComponent/AnimatedComponent";
 
 const ContactUs = () => {

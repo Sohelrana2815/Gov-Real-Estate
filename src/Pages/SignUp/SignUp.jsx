@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import signUpBackgroundImg from "../../assets/Banner/banner1.jpg";
+import signUpBackgroundImg from "../../assets/Banner/banner1.webp";
 import useAuth from "../../Hooks/useAuth";
 import { Link } from "react-router-dom";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
