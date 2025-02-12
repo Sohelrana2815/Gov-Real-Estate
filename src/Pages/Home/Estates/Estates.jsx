@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Estates = () => {
   const [estates, setEstates] = useState([]);
-  const [visibleEstates, setVisibleEstates] = useState(6);
+  const [visibleEstates, setVisibleEstates] = useState(9);
 
   useEffect(() => {
     fetch("estateData.json")
